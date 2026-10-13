@@ -1,0 +1,76 @@
+/*
+**Obsidian Header Icons** or **OHI** allows you to render icon 
+on the left from headers in Obsidian
+
+Inspired by: https://github.com/santiyounger/Org-sidian-Bullets
+
+Author: Ivan Shchedrovskyi <github.com/ltlaitoff>
+*/
+
+body {
+	--ohi-h1-icon: "❂";
+	--ohi-h2-icon: "❖";
+	--ohi-h3-icon: "✦";
+	--ohi-h4-icon: "◈";
+	--ohi-h5-icon: "✧";
+	--ohi-h6-icon: "❯";
+
+	--ohi-h1-color: #00e5ff;
+	--ohi-h2-color: #ff79c6;
+	--ohi-h3-color: #ffb86c;
+	--ohi-h4-color: #50fa7b;
+	--ohi-h5-color: #8be9fd;
+	--ohi-h6-color: #bd93f9;
+
+	--ohi-offset: 5px;
+	--ohi-offset-right: 8px;
+}
+
+.markdown-rendered h1::before,
+.HyperMD-header :not(.cm-formatting-header).cm-header-1::before {
+	margin-left: calc(var(--ohi-offset) * 0);
+	margin-right: var(--ohi-offset-right);
+	content: var(--ohi-h1-icon);
+	color: var(--ohi-h1-color);
+}
+
+.markdown-rendered h2::before,
+.HyperMD-header :not(.cm-formatting-header).cm-header-2::before {
+	margin-left: calc(var(--ohi-offset) * 0);
+	margin-right: var(--ohi-offset-right);
+	content: var(--ohi-h2-icon);
+	color: var(--ohi-h2-color);
+}
+
+.markdown-rendered h3::before,
+.HyperMD-header :not(.cm-formatting-header).cm-header-3::before {
+	margin-left: calc(var(--ohi-offset) * 1);
+	margin-right: var(--ohi-offset-right);
+	content: var(--ohi-h3-icon);
+	color: var(--ohi-h3-color);
+}
+
+.markdown-rendered h4::before,
+.HyperMD-header :not(.cm-formatting-header).cm-header-4::before {
+	margin-left: calc(var(--ohi-offset) * 2);
+	margin-right: var(--ohi-offset-right);
+	content: var(--ohi-h4-icon);
+	color: var(--ohi-h4-color);
+}
+
+.markdown-rendered h5::before,
+.HyperMD-header :not(.cm-formatting-header).cm-header-5::before {
+	margin-left: calc(var(--ohi-offset) * 3);
+	margin-right: var(--ohi-offset-right);
+	content: var(--ohi-h5-icon);
+	color: var(--ohi-h5-color);
+}
+
+.markdown-rendered h6::before,
+.HyperMD-header :not(.cm-formatting-header).cm-header-6::before {
+	margin-left: calc(var(--ohi-offset) * 4);
+	margin-right: var(--ohi-offset-right);
+	content: var(--ohi-h6-icon);
+	color: var(--ohi-h6-color);
+}
+
